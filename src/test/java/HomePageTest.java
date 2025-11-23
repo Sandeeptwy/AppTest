@@ -14,8 +14,8 @@ public class HomePageTest extends BaseTest {
     @Test
     public void searchProduct() {
 
-      //  basePage.getHomePage(driver).clickContinue();
-      //  basePage.getHomePage(driver).scroll();
+        basePage.getHomePage(driver).clickContinue();
+        basePage.getHomePage(driver).scroll();
 
     }
 }
