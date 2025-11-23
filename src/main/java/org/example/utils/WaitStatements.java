@@ -9,18 +9,14 @@ import java.time.Duration;
 
 public class WaitStatements extends BaseTest {
 
-    public static void hardWait(int sec) {
+    public static void hardWait1(int sec) throws InterruptedException {
 
-        try {
-            Thread.sleep(sec * 1000L);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
+        Thread.sleep(sec * 1000L);
     }
 
     public void explicitWait(WebElement webElement, int sec) {
-        //  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(sec));
-        //  wait.until(ExpectedConditions.visibilityOf(webElement));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(sec));
+        wait.until(ExpectedConditions.visibilityOf(webElement));
     }
 
 

@@ -10,6 +10,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,6 +24,7 @@ public class BaseTest {
     AppiumDriverLocalService service;
     public BasePage basePage;
 
+    @Parameters({"url", "browser"})
     @BeforeTest
     public void preReq() throws MalformedURLException {
         startAppium();
